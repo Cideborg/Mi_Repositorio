@@ -30,8 +30,15 @@ body{
 /* ------------------Inicio Header------------------ */
 
 .header{
-    background-color: #EBD9D9;
-    /* background-color: #EADDB3; */
+    /*
+    background: #00416A;  /* fallback for old browsers 
+    background: -webkit-linear-gradient(to right, #E4E5E6, #00416A);  /* Chrome 10-25, Safari 5.1-6 
+    background: linear-gradient(to right, #E4E5E6, #00416A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+    background: rgb(208,237,244);
+    */
+    background: rgb(208,237,244);
+    background: linear-gradient(90deg, rgba(208,237,244,1) 0%, rgba(101,122,172,1) 50%, rgba(61,69,73,1) 100%);
+
     display: inline-block;
     position:sticky;
     grid-area: header;
@@ -88,7 +95,7 @@ body{
 
 .header__navSub li{
     display: block;
-    background-color:#79819B ;
+    background-color:#6E7EA1; 
     justify-items: center;
     text-align: center;
     padding: 5px 5px;
@@ -141,6 +148,12 @@ body{
 /* ------Fin Footer-------------- */
 
 /* ----------Inicio Main---------- */
+.animate__animated.animate__fadeIn {
+    --animate-duration: 4s;
+}
+.animate__animated .animate__fadeInRight{
+    --animate-duration: 4s;
+}
 
 .main{
     background-color:#EBD9D9 ;
@@ -150,6 +163,8 @@ body{
     align-items: center;
     padding: 50px;
     overflow: scroll;
+    animation-name: animate__animated animate__fadeIn;
+    animation-duration: 15s;
 }
 .img__main{
     height: 450px;
@@ -160,11 +175,13 @@ body{
     width: 450px;
     border-radius: 5px;
     float: left;
+    
 }
 
 .main__conternedor{
     padding: 5px 10px;
     overflow: scroll;
+    transition:data-aos="fade-right";
 }
 
 .main__titulo{
@@ -217,7 +234,9 @@ body{
     overflow: auto;
 }
 /*-----------------------------------------------------------------------------------*/
-
+.animate__animated .animate__backInLeft{
+    animation-duration: 2s;
+}
 .main__nosotros{
     width: 100vw;
     height: 100vh;
